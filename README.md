@@ -1,3 +1,3 @@
 # verkkoon_tunkeutuminen
-(Ongoing)
+(Ongoing)  
 Sisältää raportteja Tero Karvisen (Haaga-Helia) kurssilta "Verkkoon tunkeutuminen ja tiedustelu".
