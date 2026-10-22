@@ -29,12 +29,27 @@ Spekseillä AM-modulaatio, 9kHz aallonpituus ja 7210kHz taajudella löysin kiina
 
 ## b) Moduwhat? 
 
-Äsken löysimme AM taajuuden kanavan, nyt etsitään FM taajuudelta jotain muuta kuin suhinaa. 
+Äsken löysin AM taajuuden kanavan, nyt etsitään FM taajuudelta jotain muuta kuin suhinaa. 
 Toistin täysin samat vaiheet kuin aikaisemmassa vaiheessa, mutta valitsin vain FM modulaation, kuuluvan kanavan löytäminen oli jostain syystä kivuttomampaa! Käytin edelleen samaa hollantilaista lähetintä.  
 
 <img width="1178" height="512" alt="image" src="https://github.com/user-attachments/assets/25c10515-9125-4572-9a45-7680fdf0a273" />  
 
 ## c) ADS-B
+
+Tarkoituksena on etsiä ADS-B palvelusta jokin lentokone, kuvailla sitä ja sen lentoa, sekä kertoa miten tiedot lentokoneesta ovat saatu. 
+Valitsin Suomen sisällä sijaitsevan lennon, ja tällä kertaa valikoitui kyseinen:  
+
+<img width="791" height="804" alt="image" src="https://github.com/user-attachments/assets/14e47bb6-4a8c-4939-a53c-5874e8c391fe" />  
+
+---  
+
+Full details ikkunan avattua saamme auki kattavat tiedot koneesta. Sen fyysisest ominaisuudet, lentohistorian sekä muita tietoja jotka ovat maksumuurin takana. 
+Vasemmassa palkissa kuvankaappauksessani nähdään koneen nykyinen korkeus, nopeus ja muita vastaavia tietoja.  
+
+ADS-B on lyhenne termistä "Automatic Dependent Surveillance - Broadcast". Siinä käytetään hyödyksi lentokoneen sisäistä paikanninta, joka lähettää sijaintiaan automaattisesti ilman, että pilottien tarvitsee tehdä mitään ylimääräistä. Tätä käytetään hyödyksi ympäri maailmaa lennonjohdossa, ja muussa lennon liikenteen ohjauksessa tai paikantamisessa. 
+Lentokoneissa oleva transponderi lähettää sijaintiaan 1090MHz taajuudella maassa sijaitsevaan radiomastoon. Toinen tapa on lähettää sitä satelliittien kautta. 
+
+
 
 
 
@@ -48,5 +63,5 @@ Toistin täysin samat vaiheet kuin aikaisemmassa vaiheessa, mutta valitsin vain 
 1. https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
 2. https://www.britannica.com/science/radio-wave
 3. http://websdr.ewi.utwente.nl:8901
-4. 
+4. https://www.adsbexchange.com/
 
