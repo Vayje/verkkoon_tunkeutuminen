@@ -49,19 +49,10 @@ Vasemmassa palkissa kuvankaappauksessani nähdään koneen nykyinen korkeus, nop
 ADS-B on lyhenne termistä "Automatic Dependent Surveillance - Broadcast". Siinä käytetään hyödyksi lentokoneen sisäistä paikanninta, joka lähettää sijaintiaan automaattisesti ilman, että pilottien tarvitsee tehdä mitään ylimääräistä. Tätä käytetään hyödyksi ympäri maailmaa lennonjohdossa, ja muussa lennon liikenteen ohjauksessa tai paikantamisessa. 
 Lentokoneissa oleva transponderi lähettää sijaintiaan 1090MHz taajuudella maassa sijaitsevaan radiomastoon. Toinen tapa on lähettää sitä satelliittien kautta. 
 
-
-
-
-
-
-
-
-
-
 ## Lähteet
 
 1. https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
 2. https://www.britannica.com/science/radio-wave
 3. http://websdr.ewi.utwente.nl:8901
 4. https://www.adsbexchange.com/
-
+5. https://spire.com/wiki/how-does-ads-b-work/
