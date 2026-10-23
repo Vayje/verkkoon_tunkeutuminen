@@ -1,4 +1,4 @@
-#H1 Korva netissä
+# H1 Korva netissä
 
 ## x) Spektrini
 Tehtävässä piirretään sähkömagneettinen spektri, ja havainnoidaan siitä muutamia eri kohtia sekä sovelluksia. Teen tämän hyvin yksinkertaisesti ilman varsinaista graafista kuvaa radioaallosta. 
@@ -17,7 +17,8 @@ Tässä muutamia sovellus- ja käyttöesimerkkejä sähkömagneettisesta spektri
 
 ## a) webDSR
 
-Tehtävässä on tarkoitus etsiä webDSR palvelusta jokin vähintään 400km omasta etäisyydestä sijaitseva lähetys (mieluusti yleisradio, ei yksityinen), ja kertoa speksit millä sen löysi. 
+Tehtävässä on tarkoitus etsiä webDSR palvelusta jokin vähintään 400km omasta etäisyydestä sijaitseva lähetys (mieluusti yleisradio, ei yksityinen), ja kertoa speksit millä sen löysi.  
+
 Valitsin listalla heti ensimmäisenä löytyvän lähettimen, joka sijaitsee Twenten yliopistossa Hollannissa. Tämän avasin lähettimen sivuilla sijaitsevan oppaan jossa oli ohjeet radiokanavan löytämiseksi. 
 Seurasin näitä uskollisesti. Ensiksi lähdin kuuntelemaan 7300kHz taajuutta (7.3MHz), ja vaihdoin modulaatiokseni AM. Sen jälkeen zoomasin waterfall osiota viisi kertaa, jotta signaalin löytäminen olisi hieman tarkempaa. 
 Lähdin tämän jälkeen summanmutikassa rullailemaan, kunnes suhina loppuisi ja kuulisin jotain selkeämpää. Kuinkas ollakkaan, pienen hakemisen jälkeen löytyi musiikkia! 
