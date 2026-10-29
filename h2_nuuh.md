@@ -94,6 +94,34 @@ Syy miksi paketti on alunperin lähtenyt, eli selvittämään annetun verkkosivu
 
 ---  
 
+## e) Mitäs tuli surffattua?
+
+Karivnen tarjoaa tehtävään .pcap tiedoston, jossa on jotain verkkoliikennettä ja sitä tulisi analysoida. 
+Avattuani tiedoston wiresharkilla, tuli näkyviin heti DNS kyselyitä google.comista. Tämän jälkeen vastaavia kyselyitä tuli osoitteesta terokarvinen.com.  
+
+<img width="1347" height="443" alt="image" src="https://github.com/user-attachments/assets/c4368b43-e9fb-4065-b73b-33eaa2d6bde7" />  
+
+---  
+
+Alempana on runsaansti TCP protokollia, ja joitain viittauksia terokarvinen.com verkkosivuun. Voisi päätellä, että kaapatussa liikenteessä on surffailtu omilla kotisivuilla. 
+I/O graphista voimme nähdä, että kaapattu liikenne on kestänyt vain seitsemän sekunttia, ja suurin paketti "piikki" on tullut heti alussa kun on otettu yhteys googleen.  
+
+<img width="857" height="698" alt="image" src="https://github.com/user-attachments/assets/2e2c8ce9-d0c3-4359-96e0-4dc16261294e" />  
+
+---  
+
+Conversations ikkunasta nähdään, että hirveän moni laite ei kerennyt mukaan tähän kaappaukseen. Kai sekin on suhteellista, laitteita voisi olla huomattavasti enemmän näinkin lyhyessä kaappauksessa, jos oltaisiin otettu yhteyttä muutamaankiin eri verkkosivuun.  
+
+<img width="1611" height="633" alt="image" src="https://github.com/user-attachments/assets/469b61f6-cb21-4f64-ae8e-8b4c5da8bbbf" />  
+
+---  
+
+## f) Mitä selainta käyttäjä käyttää?
+
+Jälleen tehtävään on tarjoiltu Karvisen toimesta .pcap tiedosto, josta tulisi wiresharkissa päätellä mitä selainta on kaappauksessa käytetty. 
+Tutkin ensiksi listalta löytyviä TCP, UDP ja DNS osioita, mutta niistä ei selainta paljastunut. 
+
+
 
 
 
