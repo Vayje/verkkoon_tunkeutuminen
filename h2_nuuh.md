@@ -5,9 +5,9 @@
 ### Wireshark - Getting started (Karvinen 2025) 
 
 Tero Karvisen kirjoittamassa artikkelissa kerrotaan mikä on Wireshark, mitä sillä voi tehdä ja miten se asennetaan omaan Linux työympäristöön.  
-Artikkelissa on yksityiskohtaiset ohjaat asennukseen, ja mahdollisten ongelmatilanteiden ratkomiseen, kuten väärään kellon aikaan systeemissä. Myös käyttäjän lisääminen "wireshark" ryhmään on lisätty, silä ilman sitä 
+Artikkelissa on yksityiskohtaiset ohjeet asennukseen, ja mahdollisten ongelmatilanteiden ratkomiseen, kuten väärään kellon aikaan systeemissä. Myös käyttäjän lisääminen "wireshark" ryhmään on lisätty, sillä ilman sitä 
 ei wiresharkissa pitkälle pötkitä.  
-Karvinen on myös avannut aluksi hieman monimutkaiselta vaikuttavaa wiresharkin UI:ta, mikä on todella kiva! Myös kaapatun verkkoliikenteen analysointiin on annettu vinkkejä, mitä aijon 
+Karvinen on myös avannut aluksi hieman monimutkaiselta vaikuttavaa wiresharkin UI:ta, mikä on todella kiva! Myös kaapatun verkkoliikenteen analysointiin on annettu vinkkejä, joita aion 
 ehdottomasti referoida tulevaisuudessa.  
 
 ---  
@@ -54,7 +54,7 @@ Palauttaakseni yhteyden navigoin takaisin virtualboxin verkkoasetuksiin, laitoin
 
 ## c) Wireshark 
 
-Tehtävänantona on asentaa Wireshark, ja siepata sillä liikennettä (omaa). Tämä onkin jo aikalailla tehtynä kahdessa aikaisemmassa osiossa. Wireshark löytyy natiivisti Kali Linuxista, ja pingi liikennettä tuli juuri siepattua 
+Tehtävänantona on asentaa Wireshark, ja siepata sillä liikennettä (omaa). Tämä onkin jo aika lailla tehtynä kahdessa aikaisemmassa osiossa. Wireshark löytyy natiivisti Kali Linuxista, ja pingi liikennettä tuli juuri siepattua 
 todistaakseni verkkoyhteyden toimivuuden.  
 
 ---  
@@ -88,7 +88,7 @@ Ohjaa paketin oikeaan porttiin/sovellukseen. Tässä tapauksessa DNS kyselyyn el
 ---  
 Application layer = DNS kysely (laatikoitu sinisellä) 
 
-Syy miksi paketti on alunperin lähtenyt, eli selvittämään annetun verkkosivun ip-osoitetta DNS-palvelusta.    
+Syy miksi paketti on alun perin lähtenyt, eli selvittämään annetun verkkosivun ip-osoitetta DNS-palvelusta.    
 
 <img width="1229" height="460" alt="Näyttökuva 2026-10-29 150351" src="https://github.com/user-attachments/assets/c258ef24-921e-442a-936f-2759bef0a2c0" />  
 
@@ -103,14 +103,14 @@ Avattuani tiedoston wiresharkilla, tuli näkyviin heti DNS kyselyitä google.com
 
 ---  
 
-Alempana on runsaansti TCP protokollia, ja joitain viittauksia terokarvinen.com verkkosivuun. Voisi päätellä, että kaapatussa liikenteessä on surffailtu omilla kotisivuilla. 
-I/O graphista voimme nähdä, että kaapattu liikenne on kestänyt vain seitsemän sekunttia, ja suurin paketti "piikki" on tullut heti alussa kun on otettu yhteys googleen.  
+Alempana on runsaansti TCP-paketteja, ja joitain viittauksia terokarvinen.com verkkosivuun. Voisi päätellä, että kaapatussa liikenteessä on surffailtu Tero Karvisen kotisivuilla. 
+I/O graphista voimme nähdä, että kaapattu liikenne on kestänyt vain seitsemän sekuntia, ja suurin paketti "piikki" on tullut heti alussa kun on otettu yhteys googleen.  
 
 <img width="857" height="698" alt="image" src="https://github.com/user-attachments/assets/2e2c8ce9-d0c3-4359-96e0-4dc16261294e" />  
 
 ---  
 
-Conversations ikkunasta nähdään, että hirveän moni laite ei kerennyt mukaan tähän kaappaukseen. Kai sekin on suhteellista, laitteita voisi olla huomattavasti enemmän näinkin lyhyessä kaappauksessa, jos oltaisiin otettu yhteyttä muutamaankiin eri verkkosivuun.  
+Conversations ikkunasta nähdään, että hirveän moni laite ei ehtinyt mukaan tähän kaappaukseen. Kai sekin on suhteellista, laitteita voisi olla huomattavasti enemmän näinkin lyhyessä kaappauksessa, jos oltaisiin otettu yhteyttä muutamaankiin eri verkkosivuun.  
 
 <img width="1611" height="633" alt="image" src="https://github.com/user-attachments/assets/469b61f6-cb21-4f64-ae8e-8b4c5da8bbbf" />  
 
@@ -119,7 +119,7 @@ Conversations ikkunasta nähdään, että hirveän moni laite ei kerennyt mukaan
 ## f) Mitä selainta käyttäjä käyttää?
 
 Jälleen tehtävään on tarjoiltu Karvisen toimesta .pcap tiedosto, josta tulisi wiresharkissa päätellä mitä selainta on kaappauksessa käytetty. 
-Tutkin ensiksi listalta löytyviä TCP, UDP ja DNS osioita, mutta niistä ei selainta paljastunut. Aiemmin käytetyt "endpoint" ja "I/O grap" välilehdet eivät myöskään paljastaneet mitään hyödyllistä tehtävään liittyen.  
+Tutkin ensiksi listalta löytyviä TCP, UDP ja DNS osioita, mutta niistä ei selainta paljastunut. Aiemmin käytetyt "endpoint" ja "I/O graph" välilehdet eivät myöskään paljastaneet mitään hyödyllistä tehtävään liittyen.  
 
 Selain todennäköisesti paljastuisi, jos liikenne olisi salaamatonta HTTP liikennettä (serverfault 2014). Mutta nyt se ei ole, joten kokeilin filtteriä "tls.handshake.type == 1", jota serverfaultin foorumeilla suositeltiin (serverfault 2024).  
 
@@ -127,7 +127,7 @@ Selain todennäköisesti paljastuisi, jos liikenne olisi salaamatonta HTTP liike
 
 ---  
 
-Aikani selailtua pakettejani ja tultuani umpikujaan päätin kysyä tekoälyltä (Claude, Sonnet 5.5), mihin kannttaisi kiinnittää huomiota tässä vaiheessa. 
+Aikani selailtua pakettejani ja tultuani umpikujaan päätin kysyä tekoälyltä (Claude, Sonnet 5.5), mihin kannattaisi kiinnittää huomiota tässä vaiheessa. 
 Vastaukseksi sain: 
 - Cipher suites, lista ja sen järjestys
 - Extensions, mitä laajennuksia on mukana ja missä järjestyksessä
@@ -141,7 +141,7 @@ Pistin claudelle kuvan cipher suites listasta. GREASE arvoja ei löytynyt, mutta
 
 ---  
 
-Seuraavaksi lähdin googlettamaan selaimia, ja niiden cipher suit orderia. Googlasin ensimmäiseksi chromen, firefoxin ja edgen. Chromen tulokset olivat runsaat mutta ei kauhean hedelmälliset. Mozillan cipher suite orderia tutkiessa tuli jo osittain yhtäläisyyksiä, joten seuraavaksi kokeilin seurata omaa liikennettä mozillasta, ja verrata client hello pakettia Karvisen tarjoaman materiaalin pakettiin. Verrattuani cipher suites osiota client hello paketista, tulin siihen tulokseen että ne ovat lähes identtiset. Pieni ero voi johtua eri mozillan versioista, mutta melko varmasti voisin väittää, että tehtävässä on käytetty firefoxia. Vertailin myös muita aikaisemmin listaamiani kohtia keskenään, ja yhtäläisyyksiä löytyi. Omasta liikenteestäni ei myöskään löytynyt GREASE arvoja, jotka ovat chromen lisäämiä hilavitkuttimia.  
+Seuraavaksi lähdin googlettamaan selaimia, ja niiden cipher suite orderia. Googlasin ensimmäiseksi chromen, firefoxin ja edgen. Chromen tulokset olivat runsaat mutta ei kauhean hedelmälliset. Mozillan cipher suite orderia tutkiessa tuli jo osittain yhtäläisyyksiä, joten seuraavaksi kokeilin seurata omaa liikennettä mozillasta, ja verrata client hello pakettia Karvisen tarjoaman materiaalin pakettiin. Verrattuani cipher suites osiota client hello paketista, tulin siihen tulokseen että ne ovat lähes identtiset. Pieni ero voi johtua eri mozillan versioista, mutta melko varmasti voisin väittää, että tehtävässä on käytetty firefoxia. Vertailin myös muita aikaisemmin listaamiani kohtia keskenään, ja yhtäläisyyksiä löytyi. Omasta liikenteestäni ei myöskään löytynyt GREASE arvoja, jotka ovat chromen lisäämiä hilavitkuttimia.  
 
 Tässä vielä vertailun vuoksi molempien "client hello" pakettien cipher suites. Tehtävän cipherit ovat ensimmäisenä, ja omani alempana.  
 
@@ -153,7 +153,7 @@ Tässä vielä vertailun vuoksi molempien "client hello" pakettien cipher suites
 
 ## g) Minkä merkkinen verkkokortti käyttäjällä on? 
 
-Seuraavaksi tarkoituksenani oli löytää Karvisen tarjoamasta .pcap filusta verkkokortti, jota materiaalissa on käytetty. Haisuni osoitti ensimmäiseksi MAC-osoitteen suuntaan, joka löytyy Ethernet II osiosta source address välilehdeltä. Osoitteen ensimmäinen puolisko (vasemmalta oikealle) on yleensä laitevalmistajan tarjoama numerosarja, jonka voisin googlettaa. Tässä vaiheessa on tärkeää huomioida, että valitsee paketin niin että source address on tutkittavan koneen IP-osoite, eikä takaisin tulevan paketin osoite.  
+Seuraavaksi tarkoituksenani oli löytää Karvisen tarjoamasta .pcap filusta verkkokortti, jota materiaalissa on käytetty. Nenäni osoitti ensimmäiseksi MAC-osoitteen suuntaan, joka löytyy Ethernet II osiosta source address välilehdeltä. Osoitteen ensimmäinen puolisko (vasemmalta oikealle) on yleensä laitevalmistajan tarjoama numerosarja, jonka voisin googlettaa. Tässä vaiheessa on tärkeää huomioida, että valitsee paketin niin että source address on tutkittavan koneen IP-osoite, eikä takaisin tulevan paketin osoite.  
 
 <img width="1106" height="803" alt="image" src="https://github.com/user-attachments/assets/ebc3dfb0-4dd1-4366-bd53-01499d5388b6" />  
 
@@ -167,9 +167,9 @@ Seuraavaksi menin "Mac address lookup" palveluun, ja kirjoitin yllä näkyvän s
 
 Koska mitään ei löytynyt, tulin siihen tulokseen että kyseessä on VirtualBoxin verkkokortti.  
 
-## h) Millä weppipalveilimilla käyttäjä on surffaillut? 
+## h) Millä weppipalvelimilla käyttäjä on surffaillut? 
 
-Vaikka liikenteen sisältö on salattua, näemme silti että materiaalissa on ensin otettu yhteys google.comiin, ja sen jälkeen terokarvinen.comiin. Surffailu on sen jälkeen jatkunut terokarvinen.comissa, ainakin päätellen ip osotteista. Conversations ikkunassa näemme että terokarvinen.comin ip4 osoite sai eniten liikennettä.  
+Vaikka liikenteen sisältö on salattua, näemme silti että materiaalissa on ensin otettu yhteys google.comiin, ja sen jälkeen terokarvinen.comiin. Surffailu on sen jälkeen jatkunut terokarvinen.comissa, ainakin päätellen ip-osoitteista. Conversations ikkunassa näemme että terokarvinen.comin IPv4-osoite sai eniten liikennettä.  
 
 <img width="1873" height="472" alt="image" src="https://github.com/user-attachments/assets/199c853e-c585-4abc-a748-5a19a0b39a68" />  
 
@@ -177,7 +177,7 @@ Vaikka liikenteen sisältö on salattua, näemme silti että materiaalissa on en
 
 ---  
 
-## I) Analyysi
+## i) Analyysi
 
 Tehtävänantona on kaapata pieni määrä omaa liikennettä ja analysoida sitä. 
 Aloitin liikenteen kaappaamisen kun mozilla oli jo auki. Sen jälkeen avasin googlen, hain hakukoneella "yle" ja avasin yle.fi verkkosivun. Lyhyessä 10 sekuntin ajassa saimme jo 1351 pakettia analysoitavaksi.  
@@ -186,13 +186,13 @@ Aloitin liikenteen kaappaamisen kun mozilla oli jo auki. Sen jälkeen avasin goo
 
 ---  
 
-Liikenne alkaa DNS kyselyllä, kun halutaan selvittää google.comin IP-osoite. Sen jälkeen siirrytään kättely, ja kättelyn vastaus vaiheeseen, jossa tullaan yksimielisyyteen yhteydestä (ACK ja SYN, ACK).  
+Liikenne alkaa DNS kyselyllä, kun halutaan selvittää google.comin IP-osoite. Sen jälkeen siirrytään kättelyyn, ja kättelyn vastaus vaiheeseen, jossa tullaan yksimielisyyteen yhteydestä (ACK ja SYN, ACK).  
 
 <img width="1321" height="338" alt="Näyttökuva 2026-10-30 131517" src="https://github.com/user-attachments/assets/dfa4b90c-e843-4e21-9004-4eb5f6d05a29" />  
 
 ---  
 
-TCP-streamia seuraamalla huomaamme ettö liikenne on salattua.  
+TCP-streamia seuraamalla huomaamme että liikenne on salattua.  
 
 <img width="1246" height="854" alt="Näyttökuva 2026-10-30 131742" src="https://github.com/user-attachments/assets/fb4b9529-a179-4ad6-a6ce-e243eee751cc" />  
 
