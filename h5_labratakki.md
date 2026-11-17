@@ -40,6 +40,9 @@ Suoritettuani Larin antamat komennot, jotka lisään tämän osion loppuun kokon
 
 <img width="835" height="428" alt="image" src="https://github.com/user-attachments/assets/0b4e978a-0307-4d7c-81a9-364edabfe262" />  
 
+<img width="1587" height="882" alt="image" src="https://github.com/user-attachments/assets/993552a2-7cc4-4b71-a676-3212530acfff" />  
+
+
 ---  
 
 ## b) ICMP Spoofing & TCP Session Hijacking 
@@ -63,10 +66,11 @@ Skriptin idea on se, että node3 kaappaa paketin matkalta, ja lähettää siitä
 
 ## c) SDN-DDos
 
-Opettajan tarjoamassa materiaalissa on labraskripti, jonka tarkoituksena on lähettää palvelimelle useita SYN-paketteja, sen jälkeen vastaanottaa SYN-ACK-paketti palvelimelta, johon olisi tarkoitus vastata ACK-paketilla. Skripti ei kuitenkaan viimeistä vastausta anna taikka viimeistele kättelyä, jolloin palvelin tukkeutuu keskeneräisistä yhteyedenottopyynnöistä.  
+Opettajan tarjoamassa materiaalissa on labraskripti, jonka tarkoituksena on lähettää palvelimelle useita SYN-paketteja, sen jälkeen vastaanottaa SYN-ACK-paketti palvelimelta, johon olisi tarkoitus vastata ACK-paketilla. Skripti ei kuitenkaan viimeistä vastausta anna taikka viimeistele kättelyä, jolloin palvelin tukkeutuu keskeneräisistä yhteyedenottopyynnöistä. Hyökkäykset tapahtuvat 10 sekunnin intervalleissa, ja kokonaiskesto on 100 sekuntia.  
 
 <img width="906" height="177" alt="image" src="https://github.com/user-attachments/assets/fb61e36c-fc5f-4ceb-8c2f-271930a6a07a" />  
 
 ## Lähteet
 1. Claude Sonnet 5 -tekoälymalli
-2. Opettajan tarjoama materiaali
+2. Iso-Anttila L. ARP-myrkytys. Verkkoon tunkeutumuinen ja tiedustelu -opintojakson esitysmateriaali Moodlessa. Luettu 17.11.2026
+3. Iso-Anttila L. 17.11.2026. Lehtori. Verkkoon tunkeutuminen ja tiedustelu. Luento. Helsinki. 
