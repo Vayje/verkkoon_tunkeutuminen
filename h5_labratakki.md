@@ -69,3 +69,4 @@ Opettajan tarjoamassa materiaalissa on labraskripti, jonka tarkoituksena on läh
 
 ## Lähteet
 1. Claude Sonnet 5 -tekoälymalli
+2. Opettajan tarjoama materiaali
