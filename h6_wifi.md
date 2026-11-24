@@ -1,6 +1,6 @@
 # H6 Wifi
 
-## a) Wifi Challenge Lab 2.1 
+## a) Wifi Challenge Lab 2.5
 
 ## b) Oppimisen raportti Lab 2.1 -harjoituksesta 
 
